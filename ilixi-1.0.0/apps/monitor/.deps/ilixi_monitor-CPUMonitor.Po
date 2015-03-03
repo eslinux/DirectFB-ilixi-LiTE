@@ -1,0 +1,366 @@
+ilixi_monitor-CPUMonitor.o: CPUMonitor.cpp CPUMonitor.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/vector \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_algobase.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/c++config.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/os_defines.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/features.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/sys/cdefs.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/wordsize.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/gnu/stubs.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/cpu_defines.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cstddef \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/include/stddef.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/functexcept.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/exception_defines.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/cpp_type_traits.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/ext/type_traits.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/ext/numeric_traits.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_pair.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/move.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/concept_check.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_iterator_base_types.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_iterator_base_funcs.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_iterator.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/debug/debug.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/allocator.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/c++allocator.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/ext/new_allocator.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/new \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/exception \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_construct.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_uninitialized.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_vector.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/initializer_list \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_bvector.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/vector.tcc \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/string \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stringfwd.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/char_traits.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/postypes.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cwchar \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/wchar.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/stdio.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/include/stdarg.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/wchar.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/xlocale.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/localefwd.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/c++locale.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/clocale \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/locale.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/locale.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/iosfwd \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cctype \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/ctype.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/types.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/typesizes.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/endian.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/endian.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/byteswap.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/ostream_insert.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cxxabi-forced.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_function.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/backward/binders.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/basic_string.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/ext/atomicity.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/gthr.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/gthr-default.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/pthread.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/sched.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/time.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/sched.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/time.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/signal.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/sigset.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/pthreadtypes.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/setjmp.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/unistd.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/posix_opt.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/environments.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/confname.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/getopt.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/atomic_word.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/basic_string.tcc \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cstdlib \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/stdlib.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/waitflags.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/waitstatus.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/sys/types.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/sys/select.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/select.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/sys/sysmacros.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/alloca.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cstring \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/string.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/fstream \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/istream \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/ios \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/ios_base.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/locale_classes.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/locale_classes.tcc \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/streambuf \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/streambuf.tcc \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/basic_ios.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/locale_facets.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cwctype \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/wctype.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/ctype_base.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/streambuf_iterator.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/ctype_inline.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/locale_facets.tcc \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/basic_ios.tcc \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/ostream \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/ostream.tcc \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/istream.tcc \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/codecvt.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cstdio \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/libio.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/_G_config.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/stdio_lim.h \
+ /opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/sys_errlist.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/basic_file.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/c++io.h \
+ /opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/fstream.tcc
+
+CPUMonitor.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/vector:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_algobase.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/c++config.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/os_defines.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/features.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/sys/cdefs.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/wordsize.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/gnu/stubs.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/cpu_defines.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cstddef:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/include/stddef.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/functexcept.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/exception_defines.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/cpp_type_traits.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/ext/type_traits.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/ext/numeric_traits.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_pair.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/move.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/concept_check.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_iterator_base_types.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_iterator_base_funcs.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_iterator.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/debug/debug.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/allocator.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/c++allocator.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/ext/new_allocator.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/new:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/exception:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_construct.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_uninitialized.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_vector.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/initializer_list:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_bvector.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/vector.tcc:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/string:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stringfwd.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/char_traits.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/postypes.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cwchar:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/wchar.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/stdio.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/include/stdarg.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/wchar.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/xlocale.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/localefwd.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/c++locale.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/clocale:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/locale.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/locale.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/iosfwd:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cctype:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/ctype.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/types.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/typesizes.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/endian.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/endian.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/byteswap.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/ostream_insert.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cxxabi-forced.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/stl_function.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/backward/binders.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/basic_string.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/ext/atomicity.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/gthr.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/gthr-default.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/pthread.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/sched.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/time.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/sched.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/time.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/signal.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/sigset.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/pthreadtypes.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/setjmp.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/unistd.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/posix_opt.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/environments.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/confname.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/getopt.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/atomic_word.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/basic_string.tcc:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cstdlib:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/stdlib.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/waitflags.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/waitstatus.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/sys/types.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/sys/select.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/select.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/sys/sysmacros.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/alloca.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cstring:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/string.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/fstream:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/istream:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/ios:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/ios_base.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/locale_classes.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/locale_classes.tcc:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/streambuf:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/streambuf.tcc:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/basic_ios.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/locale_facets.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cwctype:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/wctype.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/ctype_base.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/streambuf_iterator.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/ctype_inline.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/locale_facets.tcc:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/basic_ios.tcc:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/ostream:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/ostream.tcc:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/istream.tcc:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/codecvt.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/cstdio:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/libio.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/_G_config.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/stdio_lim.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/arm-none-linux-gnueabi//sys-root/usr/include/bits/sys_errlist.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/basic_file.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/arm-none-linux-gnueabi/bits/c++io.h:
+
+/opt/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/include/c++/4.4.3/bits/fstream.tcc:

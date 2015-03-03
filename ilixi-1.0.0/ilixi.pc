@@ -1,0 +1,19 @@
+prefix=/friendlyarm/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+datarootdir=${prefix}/share
+includedir=${prefix}/include
+
+docdir=${datarootdir}/doc/ilixi-1.0.0
+doxytagfile=${docdir}/reference/ilixi-1.0.0.tag
+htmlrefdir=${docdir}/reference/html
+version_info=0:0:0
+release=1.0
+
+Name: ilixi
+Description: Lightweight C++ user interface toolkit for embedded Linux systems.
+Version: 1.0.0
+URL: http://www.ilixi.org
+Requires: directfb >= 1.6.3 sigc++-2.0 >= 2.2.4.2 libxml-2.0 >= 2.7.7 fontconfig >= 2.6.0 fusiondale >= 0.8.2 fusionsound >= 1.6.0 sawman >= 1.6.0
+Libs: -L${libdir} -lilixi-1.0.0
+Cflags: -I${includedir}/ilixi-1.0.0
