@@ -1,0 +1,177 @@
+
+#=======================================================================
+# source environment 
+#=======================================================================
+source setenv.sh
+"
+#!/bin/bash
+export SRCROOT=`pwd`
+export FRIENDLYARM=/friendlyarm
+export CC_PATH=/home/ninhld/mini2440/SDK/FriendlyARM/toolschain/4.4.3
+export CROSS_COMPILE=${CC_PATH}/bin/arm-none-linux-gnueabi-
+export CC=${CROSS_COMPILE}gcc
+export STRIP=${CROSS_COMPILE}strip
+export AR=${CROSS_COMPILE}ar
+export AS=${CROSS_COMPILE}as
+export CXX=${CROSS_COMPILE}g++
+export CPP=${CROSS_COMPILE}cpp
+export LD=${CROSS_COMPILE}ld
+export RANLIB=${CROSS_COMPILE}ranlib
+export ARCH=arm
+export KROOT=
+export ADVBOOT_SOURCE=
+export UBOOT_SOURCE=
+export ROOTFS=/home/ninhld/mini2440/SDK/rootfs_qtopia_qt4
+export LOG=${SRCROOT}/Build.log
+export PATH=$PATH:${CC_PATH}/bin
+export PLATFORM=
+export HOST=arm-none-linux-gnueabi
+export BUILD=x86_64
+"
+
+#=======================================================================
+# Linux kernel
+#=======================================================================
+
+tar –xvzf   linux-2.6.32.2.tar.gz
+cd linux-2.6.32.2
+cp config_mini2440_p35  .config
+export ARCH=arm
+make menuconfig
+make zImage
+=> linux-2.6.32.2/arch/arm/boot
+
+export INSTALL_MOD_PATH=${FRIENDLYARM}
+make modules
+make modules_install
+=> ${FRIENDLYARM}/lib/modules
+
+
+
+
+#=======================================================================
+# build Directfb 1.7 & ilixi 1.0 
+#=======================================================================
+# build libpng1.6.0 ok
+./configure --prefix=${FRIENDLYARM}/usr/local --build=${BUILD} --host=${HOST}
+
+
+
+# build freetype2.4 ok
+./configure --prefix=${FRIENDLYARM}/usr/local --build=${BUILD} --host=${HOST}
+
+
+#alsa-lib-1.0.22
+./configure --prefix=${FRIENDLYARM}/usr/local --build=${BUILD} --host=${HOST} 
+
+
+
+#alsa-utils-1.0.22 (NOT NEED for Directfb)
+export CFLAGS=-I${FRIENDLYARM}/usr/local/include
+export LDFLAGS=-L${FRIENDLYARM}/usr/local/lib
+export PATH=$PATH:${FRIENDLYARM}/usr/local/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${FRIENDLYARM}/usr/local/lib
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:${FRIENDLYARM}/usr/local/lib/pkgconfig
+
+./configure --prefix=${FRIENDLYARM}/usr/local --build=${BUILD} --host=${HOST}
+
+
+# linux-fusion-9.0.2
+requirement: 
+- build linux kernel modules ok
+- for example: ${FRIENDLYARM}/lib/modules/2.6.32.2-FriendlyARM
+
+
+open linux-fusion Makefile and edit:
+
+KERNEL_VERSION   = 2.6.32.2-FriendlyARM
+INSTALL_MOD_PATH = ${FRIENDLYARM}
+KERNELDIR        = $(INSTALL_MOD_PATH)/lib/modules/$(KERNEL_VERSION)/build
+FUSIONCORE       = single
+ONECORE          = single
+
+- make
+- make install
+
+=> install fusion.ko and linux-one.ko to ${FRIENDLYARM}/lib/modules/2.6.32.2-FriendlyARM/drivers/char/fusion
+   fusion.h && one.h to ${FRIENDLYARM}/usr/include/linux
+
+-runtime: insmod fusion.ko, insmod linux-one.ko
+
+
+#Directfb 1.7	
+export CPPFLAGS="-I${FRIENDLYARM}/usr/include -I${FRIENDLYARM}/usr/local/include -g"
+export CFLAGS="-I${FRIENDLYARM}/usr/include -I${FRIENDLYARM}/usr/local/include -g"
+export LDFLAGS="-L${FRIENDLYARM}/lib -L${FRIENDLYARM}/usr/lib -L${FRIENDLYARM}/usr/local/lib"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${FRIENDLYARM}/usr/local/lib
+export PKG_CONFIG_PATH=${FRIENDLYARM}/usr/local/lib/pkgconfig
+./configure --prefix=${FRIENDLYARM}/usr/local \
+			--build=${BUILD} --host=${HOST} \
+			--disable-x11 \
+			--enable-drmkms=no \
+			--enable-fbdev=yes \
+			--disable-devmem \
+			--with-gfxdrivers=none \
+			--with-inputdrivers=input_hub,keyboard,serialmouse,linuxinput,tslib \
+			--enable-multi-kernel \
+			--enable-fusiondale \
+			--enable-fusionsound \
+			--enable-one \
+			--enable-sawman
+
+--with-inputdrivers=LIST
+                          LIST is a comma separated selection of inputdrivers
+                          to build. Possible inputdrivers are: all (builds all
+                          drivers), none (builds none), dbox2remote,
+                          dreamboxremote, dynapro, elo-input, gunze, h3600_ts,
+                          input_hub, joystick, keyboard, linuxinput, lirc,
+                          mutouch, penmount, ps2mouse, serialmouse,
+                          sonypijogdial, tslib, ucb1x00, wm97xx, zytronic.
+                          [default=all]
+./configure --help                          
+
+
+
+
+
+
+
+
+
+#libsigc++-2.4.0
+./configure --prefix=${FRIENDLYARM}/usr/local --build=${BUILD} --host=${HOST}
+
+
+#libxml-2.7.7 >=2.7.7
+./configure --prefix=${FRIENDLYARM}/usr/local --build=${BUILD} --host=${HOST}
+
+#fontconfig-2.11.1 >= 2.6.0
+export PATH=$PATH:${FRIENDLYARM}/usr/local/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${FRIENDLYARM}/usr/local/lib
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:${FRIENDLYARM}/usr/local/lib/pkgconfig
+
+./configure --prefix=${FRIENDLYARM}/usr/local --build=${BUILD} --host=${HOST} --enable-libxml2=yes
+
+
+			
+#ilixi 1.0
+export CPPFLAGS="-I${FRIENDLYARM}/usr/include -I${FRIENDLYARM}/usr/local/include -g"
+export CFLAGS="-I${FRIENDLYARM}/usr/include -I${FRIENDLYARM}/usr/local/include -g"
+export LDFLAGS="-L${FRIENDLYARM}/lib -L${FRIENDLYARM}/usr/lib -L${FRIENDLYARM}/usr/local/lib"
+export PKG_CONFIG_PATH=${FRIENDLYARM}/usr/local/lib/pkgconfig
+
+./configure --prefix=${FRIENDLYARM}/usr/local --build=${BUILD} --host=${HOST} --with-examples --enable-nls=yes --enable-fusiondale=yes --enable-fusionsound=yes --enable-sawman=yes
+
+
+
+# run Directfb & ilixi example on board target
+export FRIENDLYARM=/friendlyarm
+insmod ${FRIENDLYARM}/lib/modules/2.6.32.2-FriendlyARM/drivers/char/fusion/fusion.ko
+insmod ${FRIENDLYARM}/lib/modules/2.6.32.2-FriendlyARM/drivers/char/fusion/linux-one.ko
+export PATH=$PATH:${FRIENDLYARM}/usr/local/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${FRIENDLYARM}/usr/local/lib
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:${FRIENDLYARM}/usr/local/lib/pkgconfig
+
+Some example in ${FRIENDLYARM}/usr/local/bin
+Ex: ilixi_hello, ilixi_dialogs
+

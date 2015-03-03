@@ -1,0 +1,110 @@
+
+#=======================================================================
+# source environment 
+#=======================================================================
+source setenv.sh
+"
+#!/bin/bash
+export SRCROOT=`pwd`
+export FRIENDLYARM=/friendlyarm
+export CC_PATH=/home/ninhld/mini2440/SDK/FriendlyARM/toolschain/4.4.3
+export CROSS_COMPILE=${CC_PATH}/bin/arm-none-linux-gnueabi-
+export CC=${CROSS_COMPILE}gcc
+export STRIP=${CROSS_COMPILE}strip
+export AR=${CROSS_COMPILE}ar
+export AS=${CROSS_COMPILE}as
+export CXX=${CROSS_COMPILE}g++
+export CPP=${CROSS_COMPILE}cpp
+export LD=${CROSS_COMPILE}ld
+export RANLIB=${CROSS_COMPILE}ranlib
+export ARCH=arm
+export KROOT=
+export ADVBOOT_SOURCE=
+export UBOOT_SOURCE=
+export ROOTFS=/home/ninhld/mini2440/SDK/rootfs_qtopia_qt4
+export LOG=${SRCROOT}/Build.log
+export PATH=$PATH:${CC_PATH}/bin
+export PLATFORM=
+export HOST=arm-none-linux-gnueabi
+export BUILD=x86_64
+"
+
+
+#=======================================================================
+# build Directfb 1.7.0 & LiTE-0.8.10 
+#=======================================================================
+# build libpng1.6.0 ok
+./configure --prefix=${FRIENDLYARM}/usr/local --build=${BUILD} --host=${HOST}
+
+
+
+# build freetype2.4 ok
+./configure --prefix=${FRIENDLYARM}/usr/local --build=${BUILD} --host=${HOST}
+
+
+# build Directfb 1.6.0
+export FREETYPE_CFLAGS="-I${FRIENDLYARM}/usr/local/include -I${FRIENDLYARM}/usr/local/include/freetype2"
+export FREETYPE_LIBS="-L${FRIENDLYARM}/usr/local/lib -lfreetype"
+
+export LIBPNG_CFLAGS="-I${FRIENDLYARM}/usr/local/include"
+export LIBPNG_LIBS="-L${FRIENDLYARM}/usr/local/lib -lpng16"
+
+export DIRECTFB_CFLAGS="-I${FRIENDLYARM}/usr/local/include -I${FRIENDLYARM}/usr/local/include/freetype2"
+export DIRECTFB_LIBS="-L${FRIENDLYARM}/usr/local/lib"
+export MODULEDIR="/home/ninhld/Documents/mini2440/OpenSource/DirectFb/DirectFB-1.6.0"
+export CFLAGS=-g
+
+./configure --prefix=${FRIENDLYARM}/usr/local --build=${BUILD} --host=${HOST} --disable-x11 --enable-fbdev=yes --disable-devmem --with-gfxdrivers=none --with-inputdrivers=none
+
+
+
+
+# build LiTE-0.8.10  engine for directfb ok
+export CFLAGS=-I${FRIENDLYARM}/usr/local/include 
+export CPPFLAGS=-I${FRIENDLYARM}/usr/local/include 
+export LDFLAGS=-L${FRIENDLYARM}/usr/local/lib
+
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:${FRIENDLYARM}/usr/local/lib/pkgconfig
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${FRIENDLYARM}/usr/local/lib
+
+export DFB_CFLAGS="-I${FRIENDLYARM}/usr/local/include -I${FRIENDLYARM}/usr/local/include/directfb -I${FRIENDLYARM}/usr/local/include/directfb-internal"
+export DFB_LIBS="-L${FRIENDLYARM}/usr/local/lib -L${FRIENDLYARM}/usr/local/lib/directfb-1.6-0/wm -L${FRIENDLYARM}/usr/local/lib/directfb-1.6-0/systems -L${FRIENDLYARM}/usr/local/lib/directfb-1.6-0/interfaces -ldirectfb -lfusion -ldirect -lpthread -ldl"
+
+./configure --prefix=${FRIENDLYARM}/usr/local --build=${BUILD} --host=${HOST}
+
+
+copy install folder to /friendlyarm/litedfb on mini2440, source env and run demo from 
+/friendlyarm/litedfb/bin folder
+
+
+# build Directfb  example ok 
+export CFLAGS=-I${FRIENDLYARM}/usr/local/include 
+export CPPFLAGS=-I${FRIENDLYARM}/usr/local/include 
+export LDFLAGS=-L${FRIENDLYARM}/usr/local/lib
+export LIBS=" -Wl,-rpath-link -Wl,${FRIENDLYARM}/usr/local/lib"
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:${FRIENDLYARM}/usr/local/lib/pkgconfig
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${FRIENDLYARM}/usr/local/lib
+
+./configure --prefix=${FRIENDLYARM}/usr/local --build=${BUILD} --host=${HOST}
+
+
+
+
+# build single file
+export CFLAGS=-I${FRIENDLYARM}/usr/local/include
+export LDFLAGS=-L${FRIENDLYARM}/usr/local/lib
+export FILE=df_matrix
+arm-linux-gcc -o $FILE $FILE.c -I$DFBDIR/include/directfb -D_REENTRANT $DFBDIR/lib/directfb-1.6-0/wm/libdirectfbwm_default.so $DFBDIR/lib/directfb-1.6-0/systems/libdirectfb_fbdev.so -L$DFBDIR/lib -ldirectfb -lfusion -ldirect -lpthread -ldl
+
+
+
+# run Directfb & LiTE example on board target
+export FRIENDLYARM=/friendlyarm/friendlyarm
+export PATH=$PATH:${FRIENDLYARM}/usr/local/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${FRIENDLYARM}/usr/local/lib:${FRIENDLYARM}/usr/local/lib/directfb-1.6-0/wm:${FRIENDLYARM}/usr/local/lib/directfb-1.6-0/systems:${FRIENDLYARM}/usr/local/lib/directfb-1.6-0/interfaces
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:${FRIENDLYARM}/usr/local/lib/pkgconfig
+
+
+
+
+
