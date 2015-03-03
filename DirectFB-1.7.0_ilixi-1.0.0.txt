@@ -47,7 +47,12 @@ make modules_install
 => ${FRIENDLYARM}/lib/modules
 
 
-
+I had the same issue, removing __initdata in
+> arch/arm/mach-s3c2440/mach-mini2440.c
+> in mini2440_lcd_cfg array and mini2440_fb_info data structure, solves
+> the issue.
+> But after that, I ran other issues, may be I miscompile directfb, i need
+> to investigate more.  
 
 #=======================================================================
 # build Directfb 1.7 & ilixi 1.0 
