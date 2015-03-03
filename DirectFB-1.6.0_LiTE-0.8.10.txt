@@ -29,9 +29,34 @@ export HOST=arm-none-linux-gnueabi
 export BUILD=x86_64
 "
 
+#=======================================================================
+# Linux kernel
+#=======================================================================
+
+tar –xvzf   linux-2.6.32.2.tar.gz
+cd linux-2.6.32.2
+cp config_mini2440_p35  .config
+export ARCH=arm
+make menuconfig
+make zImage
+=> linux-2.6.32.2/arch/arm/boot
+
+export INSTALL_MOD_PATH=${FRIENDLYARM}
+make modules
+make modules_install
+=> ${FRIENDLYARM}/lib/modules
+
+
+I had the same issue, removing __initdata in
+> arch/arm/mach-s3c2440/mach-mini2440.c
+> in mini2440_lcd_cfg array and mini2440_fb_info data structure, solves
+> the issue.
+> But after that, I ran other issues, may be I miscompile directfb, i need
+> to investigate more.  
+
 
 #=======================================================================
-# build Directfb 1.7.0 & LiTE-0.8.10 
+# build Directfb 1.6.0 & LiTE-0.8.10 
 #=======================================================================
 # build libpng1.6.0 ok
 ./configure --prefix=${FRIENDLYARM}/usr/local --build=${BUILD} --host=${HOST}
